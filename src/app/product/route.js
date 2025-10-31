@@ -1,4 +1,4 @@
-export async function GET() {
+export async function GET(request) {
  const products = [
     { id: 'p1', name: 'Laptop', price: 1200, category: 'Electronics', stock: 5 },
     { id: 'p2', name: 'Desk Chair', price: 150, category: 'Furniture', stock: 3 },
@@ -9,5 +9,5 @@ export async function GET() {
     { id: 'p7', name: 'Milk', price: 7, category: 'Food', stock: 30 },
     { id: 'p8', name: 'Mouse', price: 40, category: 'Electronics', stock: 4 }
  ];
- return Response.json(ProductsList);
+ return Response.json(products);
 }
