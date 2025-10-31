@@ -1,4 +1,3 @@
-'use client';
 export async function GET() {
  const products = [
     { id: 'p1', name: 'Laptop', price: 1200, category: 'Electronics', stock: 5 },
