@@ -11,6 +11,7 @@ export default function ProductCard({ product, addToCart }) {
             <p>Price: ${price}</p>
             <p>Stock: {stock}</p>
             <br />
+            {/* disable when out of stock */}
            {outOfStock ? (<button disabled>Out of stock</button>
            ):
             (<button onClick={() => addCart(product)}>Add to cart</button>
