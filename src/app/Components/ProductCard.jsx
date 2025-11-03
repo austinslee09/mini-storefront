@@ -1,22 +1,20 @@
 'use client';
 
 export default function ProductCard({ product, addToCart }) {
-    const {name, price, category, stock} = product;
-    const OutOfStock = stock === 0 ;
+    const isOutOfStock = product.stock <= 0;
+    const { name, category, price, stock } = product;
 
     return (
-    <div className="product-card">
-        <h2>{name}</h2>
-        <p>Category: {category}</p>
-        <p>Price: ${price}</p>
-        <p>Stock: {stock}</p>
-        
-{/* //* Disable Add button  */}
-      {OutOfStock ? (
-        <button disabled style={{ cursor: 'not-allowed' }}>Out of Stock</button>
-        ) : (
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <div>
+           <h3>{name}</h3>
+            <p>Category: {category}</p>
+            <p>Price: ${price}</p>
+            <p>Stock: {stock}</p>
+            <br />
+           {outOfStock ? (<button disabled>Out of stock</button>
+           ):
+            (<button onClick={() => addCart(product)}>Add to cart</button>
         )}
-    </div>
-  );
+        </div>
+    );
 }
