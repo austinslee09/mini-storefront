@@ -1,13 +1,14 @@
-'use client';
-export default function StatusMessage({ type, message }) {
-    if (type === 'loading') {
-        return <p>Loading products</p>;
+'use client'
+// Shows  message based on (loading, error, or empty)
+export default function StatusMessage({loading, error, empty}) {
+    if (loading) {
+        return <p>loading</p>
     }
-    if (type === 'error') {
-        return <p>Error: {message}</p>;
+    if (error) {
+        return <p>Error loading </p>
     }
-    if (type === 'empty') {
-        return <p>No products match.</p>;
+    if (empty) {
+        return <p>No product </p>
     }
     return null;
 }

@@ -1,10 +1,10 @@
 'use client';
-
-export default function CategoryFilter({value, onChange}) {
+//  Inputs controls
+export default function PriceFilter({value, onChange}) {
     return (
         <label>
-            Category:
-            <input type="text" value={value} onChange={e => onChange(e.target.value)} />
+            Max Price:
+            <input type="number" value={value} onChange={e => onChange(e.target.value)} />
         </label>
     );
 }

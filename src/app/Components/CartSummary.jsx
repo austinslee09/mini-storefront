@@ -1,4 +1,5 @@
 'use client';
+// allows add and subtract items
 export default function CartSummary({ cart, resetCart, subItem }) {
     const itemCount = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
     const totalPrice = Object.values(cart).reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
@@ -16,7 +17,7 @@ export default function CartSummary({ cart, resetCart, subItem }) {
                 {Object.values(cart).map(item => (
                     <li key={item.id}>
                         {item.name} x {item.quantity} (${(item.price * item.quantity).toFixed(2)})
-                        <button onClick={() => subItem(item.id)} style={{ marginLeft: '10px' }}>-1</button>
+                        <button onClick={() => subItem(item.id)} >-1</button>
                     </li>
                 ))}
             </ul>

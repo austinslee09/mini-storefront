@@ -1,9 +1,9 @@
 'use client';
-// Controlled inputs that update parent state
+// input controls
 export default function PriceFilter({value, onChange}) {
     return (
         <label>
-            Final Price:
+            Max Price:
             <input type="number" value={value} onChange={e => onChange(e.target.value)} />
         </label>
     );
