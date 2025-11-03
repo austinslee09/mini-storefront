@@ -1,4 +1,4 @@
-export async function GET(request) {
+export async function GET() {
  const products = [
     { id: 'p1', name: 'Laptop', price: 1200, category: 'Electronics', stock: 5 },
     { id: 'p2', name: 'Desk Chair', price: 150, category: 'Furniture', stock: 3 },
